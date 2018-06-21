@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" crossorigin="anonymous">
+
+        <title>McMullen Vending Machine</title>
+
+        <style>
+            div.itemBox{
+                border: 1px;
+                border-radius: 15px;
+                margin: 0px;
+            }
+            div.itemBox:hover {
+                background-color: rgb(15, 139, 102);
+                opacity: 0.75;
+                font-weight: bold;
+            }
+            input {
+                text-align: center;
+                width: 100%;              
+            }
+            button {
+                width: 125px;
+                align-self: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Vending Machine</h1>
+
+        <table class="table">
+            
+            <tr>
+                <td style="width: 70%">
+                    <div class="row" id="vendingDisplay">
+                        <!-- items go here -->
+                    </div>
+                </td>
+                <td style="width: 30%" class="menu">
+                    <div id="total">
+                        <h3 id="total">Total $ In</h3>
+                        <form>
+                            <input readonly type="text" id="totalDisplay" value="ERROR">
+                            <br>
+                            <button type="button" class="btn btn-default" onclick="addMoney(1)">Add dollar</button>
+                            <button type="button" class="btn btn-default" onclick="addMoney(.25)">Add quarter</button>
+                            <br>
+                            <button type="button" class="btn btn-default" onclick="addMoney(.1)">Add dime</button>
+                            <button type="button" class="btn btn-default" onclick="addMoney(.05)">Add nickle</button>
+                        </form>
+                    </div>
+                    <hr>
+                    <div id="messages">
+                        <form>
+                            <h3>Messages</h3>
+                            <input readonly type="text" id="messageDisplay" value="ERROR">
+                            <br>
+                            Item: <input readonly type="text" id="itemDisplay" style="width: 30px">
+                            <br>
+                            <button type="button" class="btn btn-default" onclick="purchase()">Make Purchase</button>
+                        </form>
+                    </div>
+                    <hr>
+                    <div id="change">
+                        <h3>Change</h3>
+                        <form>
+                            <input readonly type="text" id="changeDisplay" value="ERROR">
+                            <br>
+                            <button type="button" class="btn btn-default" onclick="resetAll()">Change Return</button>
+                        </form>
+                    </div>
+
+                </td>
+            
+            </tr>
+
+        </table>
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>
+</html>
